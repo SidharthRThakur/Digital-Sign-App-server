@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 8080;
 app.use(bodyParser.json());
 app.use(cors());
 
-// ✅ Serve uploaded files
+// Serve uploaded files
 app.use("/uploads", express.static("uploads"));
 
 // Routes
@@ -27,6 +27,6 @@ app.get("/ping", (req, res) => {
   res.send("PONG");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on ${PORT}`);
+// });
